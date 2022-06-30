@@ -69,6 +69,7 @@ fn main() {
 	if !config_path.is_file() {
 	    println!("Config either not a file, or doesn't exist!");
 	    println!("Creating config with sensible defaults!");
+	    println!("Config resides in `~/.config/rist`!");
 	    
 	    let mut config_file = fs::File::create(config_path).unwrap();
 	    writeln!(&mut config_file, "{}", &config_default).unwrap();
